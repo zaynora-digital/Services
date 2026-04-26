@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zaynora Digital – Design. Develop. Deliver.</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -49,7 +47,7 @@
     body {
       background: var(--black);
       color: var(--white);
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Space Grotesk', 'Raleway', sans-serif;
       overflow-x: hidden;
     }
 
@@ -244,11 +242,11 @@
     }
 
     .hero h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
       font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: 0.06em;
+      line-height: 1.08;
+      letter-spacing: 0.08em;
       margin-bottom: 12px;
       animation: fadeSlideUp 0.9s 0.1s ease both;
     }
@@ -418,13 +416,13 @@
     }
 
     .section-title {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: 0.06em;
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
       text-align: center;
       margin-bottom: 16px;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     .section-title .g {
@@ -742,163 +740,6 @@
       font-size: 0.9rem;
       line-height: 1.75;
       font-weight: 300;
-    }
-
-    /* ─── PRICING ─── */
-    #pricing {
-      background: var(--black);
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1050px;
-      margin: 0 auto;
-    }
-
-    .price-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(201, 168, 76, 0.1);
-      padding: 44px 36px;
-      border-radius: 2px;
-      position: relative;
-      transition: all 0.4s;
-    }
-
-    .price-card.featured {
-      border-color: var(--gold);
-      background: linear-gradient(135deg, #0f0f18, #141420);
-      box-shadow: 0 0 60px rgba(201, 168, 76, 0.12);
-    }
-
-    .price-card:hover:not(.featured) {
-      border-color: rgba(201, 168, 76, 0.3);
-      transform: translateY(-4px);
-    }
-
-    .price-featured-badge {
-      position: absolute;
-      top: -1px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-      color: var(--black);
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 4px 16px;
-      border-radius: 0 0 4px 4px;
-    }
-
-    .price-tier {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .price-card h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      margin-bottom: 24px;
-      color: var(--white);
-    }
-
-    .price-amount {
-      font-family: 'Cinzel', serif;
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: var(--gold-bright);
-      margin-bottom: 4px;
-      line-height: 1;
-    }
-
-    .price-amount span {
-      font-size: 1rem;
-      color: var(--text-muted);
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-    }
-
-    .price-period {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      margin-bottom: 30px;
-    }
-
-    .price-divider {
-      border: none;
-      border-top: 1px solid rgba(201, 168, 76, 0.12);
-      margin-bottom: 28px;
-    }
-
-    .price-features {
-      list-style: none;
-      margin-bottom: 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .price-features li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--silver);
-      font-size: 0.88rem;
-      font-weight: 400;
-    }
-
-    .price-features li::before {
-      content: '◆';
-      color: var(--gold);
-      font-size: 0.45rem;
-      flex-shrink: 0;
-    }
-
-    .price-btn {
-      display: block;
-      text-align: center;
-      padding: 13px;
-      border-radius: 2px;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .price-btn.gold-btn {
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
-      color: var(--black);
-      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
-    }
-
-    .price-btn.gold-btn:hover {
-      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.5);
-      transform: translateY(-1px);
-    }
-
-    .price-btn.outline-btn {
-      border: 1px solid rgba(201, 168, 76, 0.3);
-      color: var(--gold-light);
-      background: transparent;
-    }
-
-    .price-btn.outline-btn:hover {
-      border-color: var(--gold);
-      background: rgba(201, 168, 76, 0.06);
     }
 
     /* ─── TESTIMONIALS ─── */
@@ -1341,6 +1182,286 @@
       transform: translateY(0);
     }
 
+    /* ─── PROJECTS SECTION ─── */
+    #projects {
+      background: var(--black);
+      position: relative;
+    }
+    #projects::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr;
+      gap: 20px;
+      max-width: 1240px;
+      margin: 0 auto 50px;
+    }
+
+    .proj-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(201,168,76,0.1);
+      padding: 36px 34px 30px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: all 0.45s cubic-bezier(0.25,0.8,0.25,1);
+      border-radius: 3px;
+    }
+    .proj-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .proj-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .proj-card:hover::after { opacity: 1; }
+
+    .proj-card.proj-featured {
+      border-color: rgba(201,168,76,0.22);
+      background: linear-gradient(160deg, #0f0f1c 0%, #0a0a12 100%);
+      box-shadow: 0 0 60px rgba(201,168,76,0.07), inset 0 1px 0 rgba(201,168,76,0.15);
+    }
+    .proj-card.proj-featured:hover {
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,168,76,0.12);
+    }
+
+    .proj-glow {
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .proj-number {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(201,168,76,0.05);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .proj-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .proj-icon-wrap {
+      width: 56px; height: 56px;
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s;
+    }
+    .proj-card:hover .proj-icon-wrap {
+      background: rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.4);
+    }
+    .proj-icon { font-size: 1.6rem; line-height: 1; }
+
+    .proj-badges {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+    }
+    .proj-badge {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.64rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid rgba(136,136,152,0.2);
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(136,136,152,0.04);
+    }
+    .proj-badge-live {
+      color: #4ade80;
+      border-color: rgba(74,222,128,0.3);
+      background: rgba(74,222,128,0.06);
+    }
+    .proj-badge-completed {
+      color: var(--gold-light);
+      border-color: rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.06);
+    }
+
+    .proj-title {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+    .proj-featured .proj-title { font-size: 1.2rem; }
+
+    .proj-category {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .proj-desc {
+      font-family: 'Cormorant Garamond', 'Raleway', serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      font-weight: 400;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+    .proj-featured .proj-desc { font-size: 1.05rem; }
+
+    .proj-tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 24px;
+    }
+    .proj-tech {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--silver);
+      border: 1px solid rgba(192,192,200,0.18);
+      padding: 3px 10px;
+      border-radius: 2px;
+      background: rgba(192,192,200,0.03);
+      transition: all 0.25s;
+    }
+    .proj-card:hover .proj-tech {
+      border-color: rgba(201,168,76,0.2);
+      color: var(--gold-light);
+    }
+
+    .proj-impact {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      background: rgba(201,168,76,0.03);
+    }
+    .proj-impact-item {
+      flex: 1;
+      padding: 14px 10px;
+      text-align: center;
+      border-right: 1px solid rgba(201,168,76,0.1);
+    }
+    .proj-impact-item:last-child { border-right: none; }
+    .proj-impact-num {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+    .proj-impact-label {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .proj-footer {
+      border-top: 1px solid rgba(201,168,76,0.08);
+      padding-top: 18px;
+    }
+    .proj-cta {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s;
+      padding: 8px 0;
+    }
+    .proj-cta:hover { color: var(--gold-bright); letter-spacing: 0.25em; }
+
+    /* Projects CTA strip */
+    .projects-cta-strip {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 32px 40px;
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 3px;
+    }
+    .projects-cta-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .projects-cta-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Responsive projects */
+    @media (max-width: 1024px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .proj-card.proj-featured {
+        grid-column: span 2;
+      }
+    }
+    @media (max-width: 640px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .proj-card.proj-featured {
+        grid-column: span 1;
+      }
+      .projects-cta-strip { flex-direction: column; text-align: center; padding: 28px 24px; }
+    }
+
     /* ─── WHATSAPP FLOATING BUTTON ─── */
     .wa-float {
       position: fixed;
@@ -1752,7 +1873,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#testimonials">Reviews</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get Started</a>
@@ -2001,68 +2122,148 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section id="pricing">
-    <div class="section-label">Investment</div>
-    <h2 class="section-title">Transparent <span class="g">Pricing Plans</span></h2>
-    <p class="section-desc">No hidden fees. Clear deliverables. Choose the package that matches your ambition.</p>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Recently <span class="g">Delivered Projects</span></h2>
+    <p class="section-desc">Real solutions built for real clients — each project crafted with precision, passion, and purpose.</p>
 
-    <div class="pricing-grid reveal">
-      <div class="price-card">
-        <div class="price-tier">Starter</div>
-        <h3>Essential Launch</h3>
-        <div class="price-amount">₹4,999 <span>onwards</span></div>
-        <div class="price-period">One-time · Delivered in 5–7 days</div>
-        <hr class="price-divider" />
-        <ul class="price-features">
-          <li>Landing Page / Portfolio Website</li>
-          <li>Mobile Responsive Design</li>
-          <li>ATS Resume (1 Version)</li>
-          <li>Business Profile Banner (1 Platform)</li>
-          <li>3 Ad Poster Designs</li>
-          <li>WhatsApp Support</li>
-        </ul>
-        <a href="#contact" class="price-btn outline-btn">Get Started</a>
+    <div class="projects-grid reveal">
+
+      <!-- Project 1: Blood Link TN -->
+      <div class="proj-card proj-featured">
+        <div class="proj-glow"></div>
+        <div class="proj-number">01</div>
+        <div class="proj-top">
+          <div class="proj-icon-wrap">
+            <span class="proj-icon">🩸</span>
+          </div>
+          <div class="proj-badges">
+            <span class="proj-badge proj-badge-live">● Live</span>
+            <span class="proj-badge">Web Platform</span>
+          </div>
+        </div>
+        <h3 class="proj-title">Blood Link TN</h3>
+        <p class="proj-category">Life-Saving Digital Platform · Tamil Nadu</p>
+        <p class="proj-desc">A dedicated blood donor connection platform for Tamil Nadu — enabling real-time matching between donors and recipients in urgent situations. Designed with speed, simplicity, and life-saving impact at its core.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">Web App</span>
+          <span class="proj-tech">Real-time Matching</span>
+          <span class="proj-tech">Tamil Nadu</span>
+          <span class="proj-tech">Mobile Responsive</span>
+        </div>
+        <div class="proj-impact">
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">500+</div>
+            <div class="proj-impact-label">Donors Registered</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">24/7</div>
+            <div class="proj-impact-label">Emergency Access</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">TN</div>
+            <div class="proj-impact-label">State Coverage</div>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20saw%20Blood%20Link%20TN%20on%20your%20portfolio.%20Can%20we%20discuss%20a%20similar%20project?" target="_blank" class="proj-cta">Discuss Similar Project →</a>
+        </div>
       </div>
 
-      <div class="price-card featured">
-        <div class="price-featured-badge">Most Popular</div>
-        <div class="price-tier">Professional</div>
-        <h3>Business Growth</h3>
-        <div class="price-amount">₹14,999 <span>onwards</span></div>
-        <div class="price-period">One-time · Delivered in 10–15 days</div>
-        <hr class="price-divider" />
-        <ul class="price-features">
-          <li>Multi-page Business Website</li>
-          <li>Custom CMS Integration</li>
-          <li>ATS Resume (3 Versions + Cover Letter)</li>
-          <li>Full Professional Portfolio</li>
-          <li>Social Media Banner Suite</li>
-          <li>10 Ad Creative Designs</li>
-          <li>SEO Optimisation</li>
-          <li>Priority Support (48h turnaround)</li>
-        </ul>
-        <a href="#contact" class="price-btn gold-btn">Get Started</a>
+      <!-- Project 2: EMS Portal -->
+      <div class="proj-card">
+        <div class="proj-glow"></div>
+        <div class="proj-number">02</div>
+        <div class="proj-top">
+          <div class="proj-icon-wrap">
+            <span class="proj-icon">👥</span>
+          </div>
+          <div class="proj-badges">
+            <span class="proj-badge proj-badge-live">● Live</span>
+            <span class="proj-badge">SaaS Portal</span>
+          </div>
+        </div>
+        <h3 class="proj-title">EMS Portal</h3>
+        <p class="proj-category">Employee Management System · Enterprise</p>
+        <p class="proj-desc">A comprehensive HR & workforce management portal built for a growing enterprise — featuring attendance automation, payroll processing, role-based dashboards, and real-time analytics to streamline every HR operation.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">React</span>
+          <span class="proj-tech">Node.js</span>
+          <span class="proj-tech">MongoDB</span>
+          <span class="proj-tech">JWT Auth</span>
+          <span class="proj-tech">PDF Reports</span>
+        </div>
+        <div class="proj-impact">
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">80%</div>
+            <div class="proj-impact-label">HR Time Saved</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">1hr</div>
+            <div class="proj-impact-label">Payroll Processing</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">100+</div>
+            <div class="proj-impact-label">Employees Managed</div>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20saw%20the%20EMS%20Portal%20on%20your%20portfolio.%20I%20need%20a%20similar%20system%20for%20my%20business." target="_blank" class="proj-cta">Build My EMS →</a>
+        </div>
       </div>
 
-      <div class="price-card">
-        <div class="price-tier">Enterprise</div>
-        <h3>Complete Solution</h3>
-        <div class="price-amount">Custom</div>
-        <div class="price-period">Scoped to your requirements</div>
-        <hr class="price-divider" />
-        <ul class="price-features">
-          <li>Employee Management System (EMS)</li>
-          <li>Full-Stack Web Application</li>
-          <li>Custom Business Software</li>
-          <li>Unlimited Revisions</li>
-          <li>Complete Brand Identity Kit</li>
-          <li>Business Development Strategy</li>
-          <li>Dedicated Project Manager</li>
-          <li>6-month Post-launch Support</li>
-        </ul>
-        <a href="#contact" class="price-btn outline-btn">Request Quote</a>
+      <!-- Project 3: Logo Design + Company Launch -->
+      <div class="proj-card">
+        <div class="proj-glow"></div>
+        <div class="proj-number">03</div>
+        <div class="proj-top">
+          <div class="proj-icon-wrap">
+            <span class="proj-icon">✦</span>
+          </div>
+          <div class="proj-badges">
+            <span class="proj-badge proj-badge-completed">✓ Delivered</span>
+            <span class="proj-badge">Brand Identity</span>
+          </div>
+        </div>
+        <h3 class="proj-title">Logo Design & Company Launch</h3>
+        <p class="proj-category">Complete Brand Identity · New Business Launch</p>
+        <p class="proj-desc">End-to-end brand identity creation for a new company launch — from logo concept and refinement to a complete visual identity kit including business cards, letterheads, social banners, and a launch-ready digital presence.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">Logo Design</span>
+          <span class="proj-tech">Brand Kit</span>
+          <span class="proj-tech">Social Banners</span>
+          <span class="proj-tech">Business Cards</span>
+          <span class="proj-tech">Launch Strategy</span>
+        </div>
+        <div class="proj-impact">
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">5</div>
+            <div class="proj-impact-label">Logo Concepts</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">12+</div>
+            <div class="proj-impact-label">Brand Assets</div>
+          </div>
+          <div class="proj-impact-item">
+            <div class="proj-impact-num">7d</div>
+            <div class="proj-impact-label">Turnaround</div>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20need%20a%20logo%20design%20and%20brand%20identity%20for%20my%20new%20company.%20Can%20we%20talk?" target="_blank" class="proj-cta">Launch My Brand →</a>
+        </div>
       </div>
+
+    </div>
+
+    <!-- CTA strip below projects -->
+    <div class="projects-cta-strip reveal">
+      <div class="projects-cta-left">
+        <div class="projects-cta-title">Have a project in mind?</div>
+        <div class="projects-cta-sub">Let's build something remarkable together.</div>
+      </div>
+      <a href="#contact" class="btn-primary">Start Your Project →</a>
     </div>
   </section>
 
@@ -2184,7 +2385,7 @@
         <ul class="footer-links">
           <li><a href="#why">About Us</a></li>
           <li><a href="#process">Our Process</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#projects">Our Projects</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
