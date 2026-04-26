@@ -1,0 +1,274 @@
+/* ═══════════════════════════════════════════════════════════
+   ZAYNORA DIGITAL — About Section
+   about.css
+   ═══════════════════════════════════════════════════════════ */
+
+#about { background: var(--charcoal); position: relative; overflow: hidden; }
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,169,78,0.4), transparent);
+}
+
+/* ── STORY BLOCK ── */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.about-story-visual { position: relative; }
+
+.about-story-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.about-story-card::after {
+  content: '"';
+  position: absolute;
+  bottom: -10px; right: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 8rem;
+  line-height: 1;
+  color: rgba(212,169,78,0.06);
+  pointer-events: none;
+}
+.about-zd-monogram {
+  font-family: 'Cinzel', serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.about-story-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--silver-dim);
+  line-height: 1.7;
+  border-top: 1px solid rgba(212,169,78,0.2);
+  padding-top: 18px;
+}
+.about-story-tagline span { color: var(--gold-light); font-style: normal; }
+
+.about-float-badge {
+  position: absolute;
+  bottom: -18px; right: -18px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #000;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(212,169,78,0.35);
+}
+
+/* Story text */
+.about-story-text { display: flex; flex-direction: column; gap: 22px; }
+.about-story-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.about-story-heading {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  color: var(--white);
+}
+.about-story-heading span { display: block; }
+.about-story-para {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem;
+  color: var(--text-body);
+  line-height: 1.95;
+  font-weight: 400;
+}
+.about-story-para strong { color: var(--gold-light); font-weight: 600; }
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+.about-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(212,169,78,0.04);
+  border: 1px solid rgba(212,169,78,0.1);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.about-value:hover { background: rgba(212,169,78,0.09); border-color: rgba(212,169,78,0.25); }
+.about-value-icon { font-size: 1.3rem; flex-shrink: 0; }
+.about-value-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.about-value-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── FOUNDERS / TEAM ── */
+.about-team-title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.about-team-sub {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 44px;
+}
+.about-team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.founder-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 40px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.founder-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.founder-card:hover { transform: translateY(-6px); border-color: rgba(212,169,78,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+.founder-card:hover::before { opacity: 1; }
+
+.founder-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  position: relative;
+}
+.founder-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright), var(--gold-dark));
+  z-index: -1;
+  animation: rotateRing 4s linear infinite;
+}
+@keyframes rotateRing { to { transform: rotate(360deg); } }
+.founder-avatar-inner {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+
+.founder-role {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.founder-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.founder-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  font-style: italic;
+}
+.founder-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.founder-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--silver-dim);
+  border: 1px solid rgba(192,192,220,0.18);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about-story { grid-template-columns: 1fr; gap: 48px; }
+  .about-story-visual { max-width: 440px; }
+  .about-float-badge { display: none; }
+}
+@media (max-width: 600px) {
+  .about-values { grid-template-columns: 1fr; }
+  .about-team-grid { grid-template-columns: 1fr; max-width: 380px; }
+  .about-story-card { padding: 28px 24px; }
+  .about-zd-monogram { font-size: 4rem; }
+  .founder-card { padding: 32px 24px; }
+}

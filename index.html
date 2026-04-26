@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Zaynora Digital — Premium tech solutions: websites, EMS portals, ATS resumes, brand design & business development. Based in Tamil Nadu, India."/>
+  <title>Zaynora Digital – Design. Develop. Deliver.</title>
+
+  <!-- ── FONTS ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Raleway:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- ── EmailJS ── -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>(function(){ emailjs.init("l6NUQCdSmKbnhs2_u"); })();</script>
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION STYLESHEETS — each section has its own file
+       styles.css     → global tokens, utilities, animations
+       nav.css        → navigation bar
+       hero.css       → hero / landing banner
+       about.css      → about us & founders
+       services.css   → services grid & modals
+       projects.css   → recent projects + why/process/testi/contact/footer
+       ══════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="nav.css"/>
+  <link rel="stylesheet" href="hero.css"/>
+  <link rel="stylesheet" href="about.css"/>
+  <link rel="stylesheet" href="services.css"/>
+  <link rel="stylesheet" href="sections.css"/>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAV  ·  nav.css
+════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <img src="logo.png" alt="Zaynora Digital Logo"/>
+    <div class="nav-logo-text-wrap">
+      <span class="nav-logo-name">ZAYNORA DIGITAL</span>
+      <span class="nav-logo-tag">Design · Develop · Deliver</span>
+    </div>
+  </a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#why">Why Us</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact" class="nav-cta">Get Started</a>
+  </div>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="nav-mobile-overlay" id="mobileMenu">
+  <a href="#about"        onclick="closeMobile()">About</a>
+  <a href="#services"     onclick="closeMobile()">Services</a>
+  <a href="#projects"     onclick="closeMobile()">Projects</a>
+  <a href="#why"          onclick="closeMobile()">Why Us</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#contact"      onclick="closeMobile()">Contact</a>
+  <div class="nav-mobile-cta-wrap">
+    <a href="#contact" onclick="closeMobile()">Get Started →</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     HERO  ·  hero.css
+════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Premium Digital Agency &nbsp;·&nbsp; Tamil Nadu, India
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="text-gold">ZAYNORA</span><br/>
+      <span class="text-silver">DIGITAL</span>
+    </h1>
+
+    <p class="hero-tagline">
+      <strong>Design.</strong> Develop. <strong>Deliver.</strong>
+      &nbsp;—&nbsp; Real Solutions. Real Impact.
+    </p>
+
+    <p class="hero-desc">
+      Born from a passion to solve real business problems, Zaynora Digital crafts premium digital experiences — from powerful websites and intelligent HR systems to career-defining portfolios and launch-ready brand identities.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-gold">Explore Services</a>
+      <a href="#about"    class="btn btn-outline">Our Story</a>
+      <a href="#contact"  class="btn btn-ghost">Book Consultation</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">150+</div>
+        <div class="hero-stat-label">Projects Delivered</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">98%</div>
+        <div class="hero-stat-label">Client Satisfaction</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24h</div>
+        <div class="hero-stat-label">Response Time</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5★</div>
+        <div class="hero-stat-label">Average Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <div class="hero-scroll-text">Scroll</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     ABOUT  ·  about.css
+════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Our Story</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">Built with <span class="text-gold">Love</span> &amp; Purpose</h2>
+    <p class="section-desc">Two computer science graduates who refused to just code — they built a company to solve real problems, understand real businesses, and create lasting digital impact.</p>
+
+    <!-- Story layout -->
+    <div class="about-story reveal-left">
+      <div class="about-story-visual">
+        <div class="about-story-card">
+          <div class="about-zd-monogram text-gold">ZD</div>
+          <p class="about-story-tagline">
+            "We didn't just learn to build software — we learned to <span>understand businesses</span>, feel their pain points, and craft solutions that truly matter."
+          </p>
+        </div>
+        <div class="about-float-badge">Est. 2025 · Tamil Nadu</div>
+      </div>
+
+      <div class="about-story-text reveal-right">
+        <div class="about-story-label">Who We Are</div>
+        <h3 class="about-story-heading">
+          <span>Two CS Minds.</span>
+          <span class="text-gold">One Shared Vision.</span>
+        </h3>
+        <p class="about-story-para">
+          Zaynora Digital was born from a <strong>love for technology and business</strong>. As computer science graduates, we saw a gap — businesses needed digital solutions, but most agencies didn't truly understand how businesses actually work.
+        </p>
+        <p class="about-story-para">
+          So we launched our own startup idea: <strong>to solve real problems, for real businesses</strong>. Every line of code we write, every design we craft, every strategy we build — it comes from genuine understanding of what makes a business grow.
+        </p>
+
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">💡</div>
+            <div>
+              <div class="about-value-title">Problem First</div>
+              <div class="about-value-desc">We understand your business before we open a code editor.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">❤️</div>
+            <div>
+              <div class="about-value-title">Built with Love</div>
+              <div class="about-value-desc">Every project is crafted with genuine passion and care.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🎓</div>
+            <div>
+              <div class="about-value-title">CS Backed</div>
+              <div class="about-value-desc">Deep technical knowledge meets creative business thinking.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🚀</div>
+            <div>
+              <div class="about-value-title">Startup Spirit</div>
+              <div class="about-value-desc">Agile, fast-moving, and obsessed with results.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founders -->
+    <div class="gold-divider" style="margin: 72px 0 56px;"></div>
+
+    <div class="about-team-title">Meet the Founders</div>
+    <p class="about-team-sub">The minds, hearts, and code behind Zaynora Digital.</p>
+
+    <div class="about-team-grid reveal">
+      <!-- CEO -->
+      <div class="founder-card">
+        <div class="founder-avatar">
+          <div class="founder-avatar-inner" style="background:linear-gradient(135deg,#9a7020,#d4a94e,#ffe084);">T</div>
+        </div>
+        <div class="founder-role">Chief Executive Officer</div>
+        <div class="founder-name">Tajil Irfana</div>
+        <p class="founder-desc">
+          The visionary strategist who turns ideas into executable plans. Tajil leads business development, client relationships, and ensures every project aligns with real-world business goals.
+        </p>
+        <div class="founder-tags">
+          <span class="founder-tag">Business Strategy</span>
+          <span class="founder-tag">CS Graduate</span>
+          <span class="founder-tag">UX Vision</span>
+          <span class="founder-tag">Client Relations</span>
+        </div>
+      </div>
+
+      <!-- MD -->
+      <div class="founder-card">
+        <div class="founder-avatar">
+          <div class="founder-avatar-inner" style="background:linear-gradient(135deg,#1a3a5c,#2a6aaa,#5aafff);">M</div>
+        </div>
+        <div class="founder-role">Managing Director</div>
+        <div class="founder-name">Mohammed Arif</div>
+        <p class="founder-desc">
+          The technical powerhouse who architects robust, scalable systems. Arif drives the engineering culture, product quality, and the technical backbone of every solution Zaynora ships.
+        </p>
+        <div class="founder-tags">
+          <span class="founder-tag">Full Stack Dev</span>
+          <span class="founder-tag">CS Graduate</span>
+          <span class="founder-tag">System Design</span>
+          <span class="founder-tag">Product Build</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     SERVICES  ·  services.css
+════════════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">What We Offer</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">Premium <span class="text-gold">Digital Solutions</span></h2>
+    <p class="section-desc">Six core services built to transform your business, career, and brand — from the ground up.</p>
+
+    <div class="services-grid reveal">
+      <div class="service-card" onclick="openModal('web')">
+        <div class="service-icon-wrap">🌐</div>
+        <h3 class="service-title">Website Development</h3>
+        <p class="service-desc">Custom-built, lightning-fast websites with premium UI/UX. From landing pages to full-stack web applications — responsive, SEO-optimised, and conversion-ready.</p>
+        <div class="service-tags">
+          <span class="service-tag">React</span><span class="service-tag">Next.js</span><span class="service-tag">WordPress</span><span class="service-tag">E-commerce</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">01</div>
+      </div>
+
+      <div class="service-card" onclick="openModal('ems')">
+        <div class="service-icon-wrap">👥</div>
+        <h3 class="service-title">Employee Management System</h3>
+        <p class="service-desc">Robust EMS platforms for modern businesses — HR automation, attendance, payroll, performance reviews, and analytics in one intelligent dashboard.</p>
+        <div class="service-tags">
+          <span class="service-tag">HR Automation</span><span class="service-tag">Payroll</span><span class="service-tag">Analytics</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">02</div>
+      </div>
+
+      <div class="service-card" onclick="openModal('poster')">
+        <div class="service-icon-wrap">📢</div>
+        <h3 class="service-title">Business Ad Posters</h3>
+        <p class="service-desc">Stop-the-scroll visual creatives for social media, print, and digital campaigns — all perfectly aligned with your brand identity and target audience.</p>
+        <div class="service-tags">
+          <span class="service-tag">Social Media</span><span class="service-tag">Print</span><span class="service-tag">Brand Aligned</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">03</div>
+      </div>
+
+      <div class="service-card" onclick="openModal('banner')">
+        <div class="service-icon-wrap">🎨</div>
+        <h3 class="service-title">Business Profile Banners</h3>
+        <p class="service-desc">Premium backside banners and profile covers for LinkedIn, Instagram, Twitter/X — making your brand instantly recognisable and professionally impressive.</p>
+        <div class="service-tags">
+          <span class="service-tag">LinkedIn</span><span class="service-tag">Instagram</span><span class="service-tag">Twitter/X</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">04</div>
+      </div>
+
+      <div class="service-card" onclick="openModal('resume')">
+        <div class="service-icon-wrap">📄</div>
+        <h3 class="service-title">ATS-Optimised Résumés</h3>
+        <p class="service-desc">Data-driven résumés engineered to beat ATS filters with 90+ scores — keyword-rich, role-targeted, and professionally formatted for maximum interview calls.</p>
+        <div class="service-tags">
+          <span class="service-tag">ATS 90+</span><span class="service-tag">Keyword Rich</span><span class="service-tag">Cover Letter</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">05</div>
+      </div>
+
+      <div class="service-card" onclick="openModal('portfolio')">
+        <div class="service-icon-wrap">💼</div>
+        <h3 class="service-title">Portfolio &amp; Business Growth</h3>
+        <p class="service-desc">Stunning developer, designer, and professional portfolios — paired with business development strategies to scale your brand, leads, and revenue.</p>
+        <div class="service-tags">
+          <span class="service-tag">Dev Portfolio</span><span class="service-tag">Lead Gen</span><span class="service-tag">Growth Strategy</span>
+        </div>
+        <div class="service-learn">View Details →</div>
+        <div class="service-num">06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     PROJECTS  ·  sections.css
+════════════════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Our Work</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">Recently <span class="text-gold">Delivered Projects</span></h2>
+    <p class="section-desc">Real solutions built for real clients — each project crafted with precision, passion, and purpose.</p>
+
+    <div class="projects-grid reveal">
+      <div class="proj-card proj-featured">
+        <div class="proj-glow"></div>
+        <div class="proj-num">01</div>
+        <div class="proj-top">
+          <div class="proj-icon-bg">🩸</div>
+          <div class="proj-badges">
+            <span class="badge badge-live"><span class="badge-dot"></span>Live</span>
+            <span class="badge badge-grey">Web Platform</span>
+          </div>
+        </div>
+        <h3 class="proj-title">Blood Link TN</h3>
+        <p class="proj-cat">Life-Saving Platform · Tamil Nadu</p>
+        <p class="proj-desc">A dedicated blood donor connection platform for Tamil Nadu — enabling real-time matching between donors and recipients in urgent situations. Designed with speed, simplicity, and life-saving impact at its core.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">Web App</span><span class="proj-tech">Real-time</span><span class="proj-tech">Tamil Nadu</span><span class="proj-tech">Mobile-First</span>
+        </div>
+        <div class="proj-metrics">
+          <div class="proj-metric"><div class="proj-metric-num">500+</div><div class="proj-metric-label">Donors</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">24/7</div><div class="proj-metric-label">Access</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">TN</div><div class="proj-metric-label">Coverage</div></div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20saw%20Blood%20Link%20TN%20on%20your%20portfolio.%20Can%20we%20discuss%20a%20similar%20project?" target="_blank" class="proj-cta">Discuss Similar Project →</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-glow"></div>
+        <div class="proj-num">02</div>
+        <div class="proj-top">
+          <div class="proj-icon-bg">👥</div>
+          <div class="proj-badges">
+            <span class="badge badge-live"><span class="badge-dot"></span>Live</span>
+            <span class="badge badge-grey">SaaS Portal</span>
+          </div>
+        </div>
+        <h3 class="proj-title">EMS Portal</h3>
+        <p class="proj-cat">HR Management · Enterprise</p>
+        <p class="proj-desc">Full-stack HR portal with attendance automation, payroll processing, and role-based dashboards. Cut payroll time from days to one hour.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">React</span><span class="proj-tech">Node.js</span><span class="proj-tech">MongoDB</span>
+        </div>
+        <div class="proj-metrics">
+          <div class="proj-metric"><div class="proj-metric-num">80%</div><div class="proj-metric-label">HR Time Saved</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">1hr</div><div class="proj-metric-label">Payroll Done</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">100+</div><div class="proj-metric-label">Employees</div></div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20need%20an%20Employee%20Management%20System%20like%20the%20EMS%20Portal%20I%20saw%20on%20your%20website." target="_blank" class="proj-cta">Build My EMS →</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-glow"></div>
+        <div class="proj-num">03</div>
+        <div class="proj-top">
+          <div class="proj-icon-bg">✦</div>
+          <div class="proj-badges">
+            <span class="badge badge-done">✓ Delivered</span>
+            <span class="badge badge-grey">Brand Identity</span>
+          </div>
+        </div>
+        <h3 class="proj-title">Logo Design &amp; Company Launch</h3>
+        <p class="proj-cat">Brand Identity · New Business Launch</p>
+        <p class="proj-desc">Complete brand identity for a new company — logo concepts, business cards, social banners, letterheads, and a launch-ready presence.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">Logo Design</span><span class="proj-tech">Brand Kit</span><span class="proj-tech">Launch</span>
+        </div>
+        <div class="proj-metrics">
+          <div class="proj-metric"><div class="proj-metric-num">5</div><div class="proj-metric-label">Logo Concepts</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">12+</div><div class="proj-metric-label">Brand Assets</div></div>
+          <div class="proj-metric"><div class="proj-metric-num">7d</div><div class="proj-metric-label">Turnaround</div></div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://wa.me/918838110026?text=Hi!%20I%20need%20logo%20design%20and%20brand%20identity%20for%20my%20new%20company." target="_blank" class="proj-cta">Launch My Brand →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-cta-strip reveal">
+      <div>
+        <div class="projects-cta-text-title">Have a project in mind?</div>
+        <div class="projects-cta-text-sub">Let's build something remarkable together.</div>
+      </div>
+      <a href="#contact" class="btn btn-gold">Start Your Project →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     WHY US  ·  sections.css
+════════════════════════════════════════════ -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Our Edge</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">Why Choose <span class="text-gold">Zaynora Digital</span></h2>
+    <p class="section-desc">We don't just deliver work — we deliver measurable results that grow your business.</p>
+
+    <div class="why-grid">
+      <div class="why-visual reveal-left">
+        <div class="why-card">
+          <div class="why-monogram text-gold">ZD</div>
+          <div class="why-card-sub">Zaynora Digital &nbsp;·&nbsp; Premium Tech Agency · TN</div>
+        </div>
+        <div class="why-float">100% Client Satisfaction</div>
+      </div>
+      <div class="why-points reveal-right">
+        <div class="why-point">
+          <div class="why-point-num">01</div>
+          <div>
+            <div class="why-point-h">We Understand Business First</div>
+            <p class="why-point-p">Our CS background gives us technical depth, but our startup experience gives us business understanding. We build for outcomes, not just code delivery.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-num">02</div>
+          <div>
+            <div class="why-point-h">Luxury Quality, Real Pricing</div>
+            <p class="why-point-p">We deliver agency-grade premium work at honest, transparent rates. Every client gets our full attention regardless of project size.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-num">03</div>
+          <div>
+            <div class="why-point-h">Speed Without Compromise</div>
+            <p class="why-point-p">Fast turnarounds backed by structured processes. Projects delivered on time with full transparency and regular updates throughout.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-num">04</div>
+          <div>
+            <div class="why-point-h">Results Are Our Measure</div>
+            <p class="why-point-p">ATS scores, SEO rankings, conversion rates, business growth — every decision is tied to numbers that actually matter to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     PROCESS  ·  sections.css
+════════════════════════════════════════════ -->
+<section id="process" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">How We Work</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">Our <span class="text-gold">4-Step Process</span></h2>
+    <p class="section-desc">A proven workflow that delivers on time, on brand, and beyond expectations — every single time.</p>
+
+    <div class="process-track reveal">
+      <div class="process-step">
+        <div class="process-dot">01</div>
+        <div class="process-content">
+          <div class="process-h">Discovery &amp; Strategy</div>
+          <p class="process-p">We deep-dive into your business, goals, audience, and competitive landscape. This forms the strategic foundation for everything we build — no assumptions, only insight.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">02</div>
+        <div class="process-content">
+          <div class="process-h">Design &amp; Prototype</div>
+          <p class="process-p">Our designers craft high-fidelity concepts aligned with your brand identity. You review, give feedback, and we refine until every detail is perfect before development begins.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">03</div>
+        <div class="process-content">
+          <div class="process-h">Develop &amp; Test</div>
+          <p class="process-p">Clean, tested code across all devices and browsers. Agile sprints with regular milestone sign-offs keep you informed and in control throughout the build.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot">04</div>
+        <div class="process-content">
+          <div class="process-h">Deploy &amp; Support</div>
+          <p class="process-p">We launch with full handover documentation, deployment support, and post-launch monitoring. Ongoing maintenance available for all solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     TESTIMONIALS  ·  sections.css
+════════════════════════════════════════════ -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span class="section-eyebrow-text">Client Stories</span>
+      <div class="section-eyebrow-line right"></div>
+    </div>
+    <h2 class="section-title">What Our <span class="text-gold">Clients Say</span></h2>
+    <p class="section-desc">Real results for real businesses. Here's what clients experienced working with Zaynora Digital.</p>
+
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Zaynora Digital built our company website in record time. The design is stunning — very premium feel that perfectly represents our brand. Our enquiries increased noticeably within weeks of launch.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Ravi Shankar</div>
+            <div class="testi-role">Founder · TechVentures India</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">The ATS resume they crafted got me 4 interview calls in the first two weeks after months of silence. The keyword optimisation was spot-on for my target roles. Truly life-changing!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Nair</div>
+            <div class="testi-role">Software Engineer · Bangalore</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Our EMS has transformed HR completely. Payroll used to take days — now it's done in an hour. The team was professional, responsive, and delivered exactly what we needed and more.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Arjun Mehta</div>
+            <div class="testi-role">Director · Meridian Logistics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CONTACT  ·  sections.css
+════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-glow"></div>
+    <div class="contact-inner">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">Get In Touch</span>
+        <div class="section-eyebrow-line right"></div>
+      </div>
+      <h2 class="section-title">Ready to <span class="text-gold">Build Something</span> Great?</h2>
+      <p class="section-desc">Tell us about your project and we'll respond within 24 hours with a tailored proposal.</p>
+
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label">Your Name *</label>
+            <input type="text" id="f-name" class="form-input" placeholder="e.g. Mohammed Arif" required/>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Email Address *</label>
+            <input type="email" id="f-email" class="form-input" placeholder="you@example.com" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label">WhatsApp / Phone *</label>
+            <input type="tel" id="f-phone" class="form-input" placeholder="+91 XXXXX XXXXX" required/>
+          </div>
+          <div class="form-field">
+            <label class="form-label">Company (optional)</label>
+            <input type="text" id="f-company" class="form-input" placeholder="Your Business Name"/>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Service Needed</label>
+          <select id="f-service" class="form-select">
+            <option value="" disabled selected>Select a service…</option>
+            <option>Website Development</option>
+            <option>Employee Management System</option>
+            <option>Business Advertisement Poster</option>
+            <option>Business Profile Banner</option>
+            <option>ATS-Optimised Résumé</option>
+            <option>Portfolio Creation</option>
+            <option>Business Development Strategy</option>
+            <option>Multiple Services</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Your Message *</label>
+          <textarea id="f-msg" class="form-textarea" placeholder="Tell us about your project, goals, timeline, and budget…" required></textarea>
+        </div>
+        <div id="formStatus" class="form-status"></div>
+        <button type="submit" id="submitBtn" class="btn btn-gold form-submit">Send Enquiry →</button>
+        <p class="form-note">🔒 &nbsp;Private &amp; secure. We respond within 4–24 hours. You can also reach us directly at <a href="mailto:zaynoradigital@gmail.com" style="color:var(--gold-light)">zaynoradigital@gmail.com</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER  ·  sections.css
+════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <img src="logo.png" alt="Zaynora Digital" class="footer-logo-img"/>
+          <div class="footer-brand-name">ZAYNORA DIGITAL</div>
+        </div>
+        <div class="footer-brand-tag">Design · Develop · Deliver</div>
+        <p class="footer-brand-desc">Premium digital solutions for ambitious businesses. We turn ideas into powerful digital realities — beautifully crafted and results-driven.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services">Website Development</a>
+          <a href="#services">EMS Solutions</a>
+          <a href="#services">Ad Poster Design</a>
+          <a href="#services">Profile Banners</a>
+          <a href="#services">ATS Résumés</a>
+          <a href="#services">Portfolio Making</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="#projects">Our Projects</a>
+          <a href="#process">Our Process</a>
+          <a href="#why">Why Us</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="footer-links">
+          <a href="https://wa.me/918838110026" target="_blank">WhatsApp: +91 88381 10026</a>
+          <a href="mailto:zaynoradigital@gmail.com">zaynoradigital@gmail.com</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn Page</a>
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+          <a href="https://behance.net" target="_blank">Behance Portfolio</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>Zaynora Digital</span>. All rights reserved. Crafted with ◆ love in Tamil Nadu.</div>
+      <div class="footer-socials">
+        <a href="https://linkedin.com" target="_blank" class="footer-social" title="LinkedIn">in</a>
+        <a href="https://instagram.com" target="_blank" class="footer-social" title="Instagram">ig</a>
+        <a href="https://wa.me/918838110026" target="_blank" class="footer-social" title="WhatsApp">wa</a>
+        <a href="mailto:zaynoradigital@gmail.com" class="footer-social" title="Email">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════
+     WHATSAPP FLOAT  ·  sections.css
+════════════════════════════════════════════ -->
+<div class="wa-float">
+  <div class="wa-bubble" id="waBubble">
+    <strong>💬 Chat with Zaynora Digital</strong>
+    Hi! How can we help your business today?
+  </div>
+  <a href="https://wa.me/918838110026?text=Hi%20Zaynora%20Digital!%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%20Can%20we%20talk%3F"
+     target="_blank" class="wa-btn" id="waBtn" title="Chat on WhatsApp">
+    <div class="wa-notif">1</div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<script>
+/* ── NAV: scroll shadow + active link ── */
+const nav = document.getElementById('nav');
+const allSections = document.querySelectorAll('section[id]');
+const desktopLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+  let cur = '';
+  allSections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) cur = s.id; });
+  desktopLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${cur}`);
+  });
+}, { passive: true });
+
+/* ── NAV: hamburger ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeMobile() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close on outside click
+mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMobile(); });
+
+/* ── REVEAL ANIMATIONS ── */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
+
+/* ── WHATSAPP BUBBLE ── */
+setTimeout(() => {
+  document.getElementById('waBubble').classList.add('show');
+  setTimeout(() => document.getElementById('waBubble').classList.remove('show'), 7000);
+}, 4000);
+document.getElementById('waBtn').addEventListener('click', () => {
+  document.getElementById('waBubble').classList.remove('show');
+  document.querySelector('.wa-notif').style.display = 'none';
+});
+
+/* ── SERVICE MODAL DATA ── */
+const SERVICES = {
+  web: {
+    icon:'🌐', title:'Website Development',
+    desc:'We build custom, high-performance websites tailored to your brand and business goals. From sleek landing pages to full-stack web applications — every site is responsive, SEO-optimised, fast-loading, and built to convert.',
+    features:['Custom UI/UX Design — unique, on-brand visuals from scratch','Mobile-First Responsive — flawless across all screen sizes','SEO Optimised — structured for Google from day one','E-commerce Ready — WooCommerce, Shopify, or custom carts','CMS Integration — manage your content with ease','Performance Optimised — 90+ Google PageSpeed scores','SSL & Security — HTTPS, firewall, best practices','Post-launch Support — 30-day free bug fixes'],
+    tech:['React','Next.js','WordPress','Node.js','Tailwind CSS','Figma','Shopify','PWA','REST API','MongoDB'],
+    price:'From ₹4,999', timeline:'5–14 business days', wa:'I am interested in Website Development.'
+  },
+  ems: {
+    icon:'👥', title:'Employee Management System',
+    desc:'A fully custom EMS built for your business workflow. Replace spreadsheets and manual processes with an intelligent, centralised HR platform your team will actually love using.',
+    features:['Employee Profiles & Records — centralised database','Attendance & Leave Tracking — clock-in/out, approvals','Payroll Automation — salary slips, deductions, compliance','Performance Reviews — KPI tracking, appraisal cycles','Role-based Access — admin, HR, manager, employee views','Real-time Analytics — workforce reports, heat maps','Document Management — contracts, IDs stored securely','Mobile Friendly — access via browser on any device'],
+    tech:['React','Node.js','MongoDB','Express','JWT Auth','Chart.js','PDF Export','Email Alerts'],
+    price:'Custom Quote', timeline:'4–8 weeks', wa:'I need a custom Employee Management System.'
+  },
+  poster: {
+    icon:'📢', title:'Business Advertisement Posters',
+    desc:'Stop-the-scroll visual creatives engineered to capture attention and drive action. Designed with your brand identity, target audience, and platform requirements in mind.',
+    features:['Social Media Creatives — Instagram, Facebook, LinkedIn sizes','Promotional Posters — offers, launches, seasonal campaigns','Print-ready Files — CMYK, 300 DPI, bleed-included','Brand Consistency — your fonts, colours, logo applied correctly','Multiple Variations — A/B versions for testing','Fast Turnaround — first draft within 24 hours','Unlimited Revisions — until 100% satisfied','Source Files Included — editable PSD/AI on request'],
+    tech:['Adobe Photoshop','Illustrator','Canva Pro','Figma','After Effects','Print Export','Social Sizes'],
+    price:'From ₹499/poster', timeline:'24–48 hours', wa:'I need business advertisement poster designs.'
+  },
+  banner: {
+    icon:'🎨', title:'Business Profile Banners',
+    desc:'Your banner is the first thing potential clients see. We design premium, brand-aligned covers that communicate professionalism instantly and leave a lasting impression.',
+    features:['LinkedIn Banners — 1584×396px, perfectly branded','Facebook Cover Photos — timeline and page optimised','Twitter/X Headers — 1500×500px safe zones respected','Instagram Highlight Covers — cohesive icon sets','YouTube Channel Art — multi-device safe layouts','WhatsApp Business Banners — channel covers','Business Card Designs — front & back, print-ready','Email Signature Banners — HTML-compatible'],
+    tech:['Photoshop','Illustrator','Canva Pro','Figma','PNG/JPG','HTML Email Compatible'],
+    price:'From ₹299/banner', timeline:'12–24 hours', wa:'I need professional profile banner designs.'
+  },
+  resume: {
+    icon:'📄', title:'ATS-Optimised Résumés',
+    desc:'Over 75% of résumés are rejected by ATS before a human reads them. We craft keyword-rich, role-targeted résumés with 90+ ATS scores that get you through filters and impress recruiters.',
+    features:['ATS Score Analysis — tested against real ATS tools','Keyword Optimisation — targeted to your industry and roles','Professional Formatting — clean, scannable layouts','Quantified Achievements — impact metrics throughout','Tailored Versions — for different job types','Cover Letter — personalised for target roles','LinkedIn Optimisation — matching your résumé narrative','2 Rounds Revisions — free after initial delivery'],
+    tech:['ATS Testing','Word Format','PDF Format','LinkedIn Sync','Keyword Research','Industry Templates'],
+    price:'From ₹999', timeline:'48–72 hours', wa:'I want an ATS-optimised resume.'
+  },
+  portfolio: {
+    icon:'💼', title:'Portfolio & Business Growth',
+    desc:'A powerful portfolio works 24/7 to showcase your skills and win clients. We build stunning custom portfolios paired with business growth strategies that scale your brand and revenue.',
+    features:['Developer Portfolios — interactive, GitHub integrated','Designer Portfolios — visual-first showcase layouts','Freelancer Portfolios — service-focused with testimonials','Custom Domain + Hosting — fully deployed and live','Business Development Strategy — client attraction roadmap','Lead Generation Setup — forms, WhatsApp, email capture','LinkedIn Growth Plan — profile + content strategy','Social Media Branding — consistent across all platforms'],
+    tech:['React','Next.js','Framer Motion','Netlify','Vercel','GitHub Pages','Google Analytics'],
+    price:'From ₹3,999', timeline:'5–10 business days', wa:'I want a professional portfolio and business growth strategy.'
+  }
+};
+
+function openModal(key) {
+  const s = SERVICES[key]; if (!s) return;
+  const features = s.features.map(f => `<div class="modal-feature"><div class="modal-feature-dot"></div><div class="modal-feature-text">${f}</div></div>`).join('');
+  const tech = s.tech.map(t => `<span class="modal-tech-chip">${t}</span>`).join('');
+  document.getElementById('modalContent').innerHTML = `
+    <div class="modal-header">
+      <div class="modal-icon">${s.icon}</div>
+      <div class="modal-title">${s.title}</div>
+      <p class="modal-desc">${s.desc}</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section-label">What's Included</div>
+      <div class="modal-features">${features}</div>
+      <div class="modal-section-label">Tools &amp; Technologies</div>
+      <div class="modal-tech-row">${tech}</div>
+      <div class="modal-cta-bar">
+        <div>
+          <div class="modal-cta-info-title">💰 ${s.price} &nbsp;·&nbsp; ⏱ ${s.timeline}</div>
+          <div class="modal-cta-info-sub">Pricing varies by scope. Get a free quote in minutes.</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="https://wa.me/918838110026?text=${encodeURIComponent('Hi Zaynora Digital! ' + s.wa + ' Can we discuss?')}" target="_blank" class="btn btn-gold" style="padding:10px 20px;font-size:0.72rem;">WhatsApp Us</a>
+          <a href="#contact" onclick="closeModal()" class="btn btn-outline" style="padding:10px 20px;font-size:0.72rem;">Email Enquiry</a>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e) { if (e.target.id === 'modalOverlay') closeModal(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ── EMAILJS FORM ── */
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn    = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+  const name   = document.getElementById('f-name').value.trim();
+  const email  = document.getElementById('f-email').value.trim();
+  const phone  = document.getElementById('f-phone').value.trim();
+  const co     = document.getElementById('f-company').value.trim();
+  const svc    = document.getElementById('f-service').value;
+  const msg    = document.getElementById('f-msg').value.trim();
+
+  if (!name || !email || !phone || !msg) {
+    status.className = 'form-status error';
+    status.innerText = '⚠ Please fill all required fields (name, email, phone, message).';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    status.className = 'form-status error';
+    status.innerText = '⚠ Please enter a valid email address.';
+    return;
+  }
+  btn.innerText = 'Sending…'; btn.disabled = true;
+  emailjs.send('service_e155of6', 'template_489hi0e', {
+    from_name: name, from_email: email, phone,
+    company: co || 'Not provided', service: svc || 'Not selected', message: msg
+  }, 'l6NUQCdSmKbnhs2_u')
+  .then(() => {
+    status.className = 'form-status success';
+    status.innerText = '✅ Enquiry sent! We\'ll respond within 4–24 hours. Check your inbox.';
+    document.getElementById('contactForm').reset();
+  })
+  .catch(() => {
+    status.className = 'form-status error';
+    status.innerText = '❌ Send failed. Please WhatsApp us or email zaynoradigital@gmail.com';
+  })
+  .finally(() => { btn.innerText = 'Send Enquiry →'; btn.disabled = false; });
+}
+</script>
+
+</body>
+</html>
